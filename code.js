@@ -1,10 +1,12 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
-ctx.strokeStyle = '#07e85a';
+
+// Line Colors, width, blur, edges
+ctx.strokeStyle = '#07e8cb';
 ctx.lineWidth = 10;
 ctx.lineCap = 'round';
-ctx.shadowBlur = 8;
-ctx.shadowColor = '#07e85a'
+ctx.shadowBlur = 7;
+ctx.shadowColor = '#07e8cb'
 
 function degToRad(degree) {
   var factor = Math.PI/180;
@@ -41,6 +43,9 @@ function renderTime() {
   ctx.stroke();
 
   // Date
+  ctx.font = '24px Futura';
+  ctx.fillStyle = '#07e8cb';
+  ctx.fillText(today, 160, 250);
 
   // Time
 }
