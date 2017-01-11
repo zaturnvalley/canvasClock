@@ -27,7 +27,7 @@ function renderTime() {
   // Draw Background 
   gradient = ctx.createRadialGradient(250, 250, 5, 250, 250, 300);
   gradient.addColorStop(0, '#023d35');
-  gradient.addColorStop(1, '#000');
+  gradient.addColorStop(.8, '#000');
   ctx.fillStyle = gradient;
   // ctx.fillStyle = '#000';
   ctx.fillRect(0,0,500,500);
@@ -55,5 +55,8 @@ function renderTime() {
   ctx.font = '15px Futura';
   ctx.fillStyle = '#07e8cb';
   ctx.fillText(time, 216, 280);
+
+  var dataURL = canvas.toDataURL();
+  document.getElementById('myImage').src = dataURL;
 }
 setInterval(renderTime, 40);
