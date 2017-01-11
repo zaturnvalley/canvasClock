@@ -1,5 +1,7 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
+ctx.strokeStyle = '#07e85a';
+ctx.lineWidth = 10;
 
 function degToRad(degree) {
   var factor = Math.PI/180;
@@ -15,8 +17,11 @@ function renderTime() {
   var minutes = now.getMinutes();
   var seconds = now.getSeconds();
   var milliseconds = now.getMilliseconds();
+  var newSeconds = seconds + (milliseconds/1000);
 
   // Draw Background 
+  ctx.fillStyle = '#000';
+  ctx.fillRect(0,0,500,500);
 
   // Draw Hours
   ctx.beginPath();
@@ -29,11 +34,11 @@ function renderTime() {
   ctx.stroke();
   // Draw Seconds
   ctx.beginPath();
-  ctx.arc(250, 250, 140, degToRad(270), degToRad((seconds*6)-90));
+  ctx.arc(250, 250, 140, degToRad(270), degToRad((newSeconds*6)-90));
   ctx.stroke();
 
   // Date
 
   // Time
 }
-setInterval(renderTime, 1000);
+setInterval(renderTime, 40);
