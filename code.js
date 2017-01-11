@@ -48,5 +48,8 @@ function renderTime() {
   ctx.fillText(today, 160, 250);
 
   // Time
+  ctx.font = '15px Futura';
+  ctx.fillStyle = '#07e8cb';
+  ctx.fillText(time, 216, 280);
 }
 setInterval(renderTime, 40);
