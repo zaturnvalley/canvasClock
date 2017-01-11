@@ -20,10 +20,13 @@ function renderTime() {
 
   // Draw Hours
   ctx.beginPath();
-  ctx.arc(250, 250, 200, 0, degToRad(180));
+  ctx.arc(250, 250, 200, degToRad(270), degToRad((hours*15)-90));
   ctx.stroke();
-  // Draw Minutes
 
+  // Draw Minutes
+  ctx.beginPath();
+  ctx.arc(250, 250, 170, degToRad(270), degToRad((minutes*6)-90));
+  ctx.stroke();
   // Draw Seconds
 
   // Date
