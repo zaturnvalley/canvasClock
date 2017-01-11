@@ -5,7 +5,7 @@ var ctx = canvas.getContext('2d');
 ctx.strokeStyle = '#07e8cb';
 ctx.lineWidth = 10;
 ctx.lineCap = 'round';
-ctx.shadowBlur = 7;
+ctx.shadowBlur = 8;
 ctx.shadowColor = '#07e8cb'
 
 function degToRad(degree) {
@@ -25,7 +25,11 @@ function renderTime() {
   var newSeconds = seconds + (milliseconds/1000);
 
   // Draw Background 
-  ctx.fillStyle = '#000';
+  gradient = ctx.createRadialGradient(250, 250, 5, 250, 250, 300);
+  gradient.addColorStop(0, '#023d35');
+  gradient.addColorStop(1, '#000');
+  ctx.fillStyle = gradient;
+  // ctx.fillStyle = '#000';
   ctx.fillRect(0,0,500,500);
 
   // Draw Hours
