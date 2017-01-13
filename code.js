@@ -28,7 +28,7 @@ function renderTime() {
   // gradient = ctx.createRadialGradient(250, 250, 5, 250, 250, 300);
   // gradient.addColorStop(0, '#023d35');
   // gradient.addColorStop(.8, '#000');
-  ctx.fillStyle = gradient;
+  // ctx.fillStyle = gradient;
   ctx.fillStyle = '#000';
   ctx.fillRect(0,0,500,500);
 
